@@ -1,0 +1,3 @@
+module,student_id,run_id,seed,dataset,arsitektur,parameter,perkalian,n_update,train_loss,val_loss,val_acc,gap,detik_per_epoch,catatan
+M05,123450121,fnn,121,fashion,Flatten -> Linear -> ReLU -> Linear,421360,420820,790,0.24015703544616698,0.45420811462402344,0.842,0.21405107917785646,0.6491416099998787,device=cpu
+M05,123450121,cnn-baseline,121,fashion,Conv2d -> ReLU -> MaxPool2d -> Conv2d -> ReLU -> MaxPool2d -> Flatten -> Linear -> ReLU -> Linear,421642,4241152,790,0.23557129898071288,0.40502115631103514,0.861,0.16944985733032225,7.980084259999967,device=cpu
