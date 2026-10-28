@@ -1,0 +1,7 @@
+run_id,module,student_id,seed,dataset,split,model,optimizer,learning_rate,batch_size,epochs,train_loss,val_loss,val_metric,test_metric,parameters,trainable_parameters,runtime_seconds,device,notes
+from-scratch,M06,123450121,121,transfer-fashion-mnist-4kelas,train-val-test,resnet18-scratch,Adam,0.001,32,5,1.2259,1.7132,0.4167,,11178564,11178564,300.2515,cpu,ringan; bobot acak; train_loss=val_loss-gap
+frozen-backbone,M06,123450121,121,transfer-fashion-mnist-4kelas,train-val-test,resnet18-frozen,Adam,0.001,32,5,0.7827,0.9025,0.6944,,11178564,2052,148.4115,cpu,ringan; hanya head; train_loss=val_loss-gap
+partial-layer4,M06,123450121,121,transfer-fashion-mnist-4kelas,train-val-test,resnet18-partial,Adam,0.0001,32,5,0.1426,0.686,0.7222,,11178564,8395780,207.736,cpu,ringan; terbaik menurut val_loss
+full-finetune,M06,123450121,121,transfer-fashion-mnist-4kelas,train-val-test,resnet18-full,Adam,0.0001,32,5,0.2482,0.6943,0.75,,11178564,11178564,286.9715,cpu,ringan; train_loss=val_loss-gap
+partial-tanpa-augmentasi,M06,123450121,121,transfer-fashion-mnist-4kelas,train-val-test,resnet18-partial,Adam,0.0001,32,5,0.0238,0.701,0.75,,11178564,8395780,,cpu,tanpa augmentasi; train_acc 1.0
+partial-augmentasi-agresif,M06,123450121,121,transfer-fashion-mnist-4kelas,train-val-test,resnet18-partial,Adam,0.0001,32,5,0.6184,0.8975,0.625,,11178564,8395780,,cpu,crop 0.3-1.0 + rotasi 45; train_acc 0.7381
